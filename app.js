@@ -44,7 +44,7 @@ prev.onclick = function() {
 }
 
 // Autoplay del slider
-let refreshInterval = setInterval(next.onclick, 25000);
+let refreshInterval = setInterval(next.onclick, 30000);
 
 // Evento click en las miniaturas
 thumbnails.forEach((thumbnail, index) => {
@@ -79,4 +79,12 @@ items.forEach((item, index) => {
 // Añadir alt attribute a las imágenes de las miniaturas para mejorar SEO
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.querySelector('img').setAttribute('alt', `Thumbnail ${index + 1}`);
+});
+
+// Agregar un event listener al documento para ocultar el dropdown cuando se hace clic en cualquier lugar fuera de él
+document.addEventListener('click', function(event) {
+    // Verificar si el clic no ocurrió dentro del dropdown ni en el botón de menú
+    if (!dropdown.contains(event.target) && event.target !== menuToggle) {
+        dropdown.style.display = 'none'; // Ocultar el dropdown
+    }
 });
