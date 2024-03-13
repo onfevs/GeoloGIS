@@ -1,11 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Definir reglas */
+:root{
+    --bg: #000000;
+    --color1: rgb(0, 249, 164);
+    --color2: #04ca87;
+    --color3: #089c6a;
+    --color4: rgb(12, 110, 77);
+    --color5: #1bc6aa;
+    --color6: #be1e5a; 
+    --font-T: "Montserrat", sans-serif;
+    --font-ST: "PT Sans", sans-serif;
+    --font_P: "Merriweather", serif;
+}
 
 /* Estilos generales */
 body {
-    font-family: Poppins, sans-serif;
+    font-family: var(--font-1);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     margin: 0;
     background-color: #010101;
     color: #eee;
+    /* .merriweather-light {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: normal;
+      } */
+      /* .pt-sans-regular {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      } */
+    /* // <uniquifier>: Use a unique and descriptive class name
+        // <weight>: Use a value from 100 to 900
+
+        .montserrat-<uniquifier> {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        } */
 }
 
 svg {
@@ -15,6 +53,7 @@ svg {
 a {
     text-decoration: none;
     color: inherit;
+    font-family: var(--font-T);
 }
 
 /* Estilos del encabezado */
@@ -35,32 +74,38 @@ header {
 }
 
 .logo-glass {
+    font-family: var(--font-T);
     font-size: 24px;
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--color1);
     text-transform: uppercase;
 }
 
 .h-regular {
+    font-family: var(--font-ST);
     font-size: 30px;
-    color: #fff;
+    color: rgb(255, 255, 255, 0.7);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
     border-radius: 10px;
     padding: 10px 10px 0px 10px;
     backdrop-filter: blur(1px);
     margin-left: 20px;
     position: absolute;
-    top: 15%;
+    top: 1%;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Estilos del menú */
 .menu {
+    font-family: var(--font-T);
+    text-transform: uppercase;
+    color: white;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 10px;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -91,19 +136,18 @@ header {
 
 .social-media-item a,
 .cv-download {
-    color: #eee;
+    color: white;
     text-decoration: none;
 }
 
 .social-media-item::before,
 .cv-download::before {
-    content: "•";
     color: #eee;
 }
 
 .cv-download {
-    background-color: #eee;
-    color: #010101;
+    background-color: var(--color1);
+    color: black;
     border-radius: 5px;
     padding: 5px 10px;
 }
@@ -135,7 +179,7 @@ header {
     width: 25px;
     height: 3px;
     margin-bottom: 5px;
-    background-color: #eee; /* Cambiar el color de las líneas del menú hamburguesa */
+    background-color: var(--color1); /* Cambiar el color de las líneas del menú hamburguesa */
 }
 
 figure {
@@ -179,12 +223,31 @@ figure {
     width: 90%;
     max-width: 80%;
     z-index: 1;
-    word-wrap: break-word; /* Para permitir que las palabras largas se rompan */
-    overflow-wrap: break-word; /* Para mejorar la compatibilidad con navegadores antiguos */
-    font-size: 16px; /* Ajustar el tamaño de la fuente según sea necesario */
-    letter-spacing: 0.5px; /* Ajustar el espaciado entre letras según sea necesario */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    backdrop-filter: blur(1px);
+    padding: 20px 20px 0px 20px;
 }
 
+/* Estilos específicos para el primer párrafo dentro de figcaption */
+.slider-items .item figcaption p:first-child {
+    font-family: var(--font-ST);
+    font-size: 16px;
+}
+
+/* Estilos para los párrafos dentro de figcaption */
+.slider-items .item figcaption p.description {
+    font-family: var(--font_P);
+    font-size: 20px;
+}
 
 .slider-items .item figcaption p:nth-child(1) {
     letter-spacing: 5px;
@@ -192,22 +255,33 @@ figure {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
     border-radius: 5px;
     text-transform: uppercase;
-    color: gold;
+    color: var(--color1);
     font-weight: bold;
     padding: 5px;
     width: 30%;
     text-align: center;
+    align-self: flex-start;
 }
 
 .slider-items .item figcaption h2 {
     font-size: 30px;
     margin: 0;
     text-transform: uppercase;
+    font-family: var(--font-T);
+    color: var(--color1);
+    align-self: flex-start;
 }
 
 .slider-items .item.active {
     opacity: 1;
     z-index: 10;
+}
+
+.service-list li {
+    font-size: 16px; /* Tamaño de fuente para los elementos de la lista */
+    color: white; /* Color similar al primer <p> */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    font-family: var(--font_P);
 }
 
 @keyframes showContent {
@@ -252,14 +326,14 @@ figure {
     height: 40px;
     border-radius: 5px;
     font-size: x-large;
-    color: #eee;
+    color: var(--color1);
     transition: background-color 0.5s, color 0.5s;
     cursor: pointer;
 }
 
 .arrows button:hover {
-    background-color: #eee;
-    color: black;
+    background-color: var(--color5);
+    color: white;
 }
 
 /* Estilos de la sección de miniaturas */
@@ -305,7 +379,7 @@ figure {
 
 .thumbnail figure.active {
     filter: brightness(1);
-    color: gold;
+    color: var(--color1);
     font-size: large;
     font-weight: bold;
 }
@@ -326,11 +400,38 @@ figure {
     .slider-items {
         position: absolute;
         width: 100vw;
-        height: 70%;
+        height: 100%;
         max-width: 100%;
         margin: 0 auto;
         overflow: hidden;
         top: 0px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+
+    .dropdown {
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        z-index: 100;
     }
 
     .logo-glass {
@@ -339,7 +440,7 @@ figure {
         text-transform: uppercase;
     }
     .h-regular {
-        font-size: 14px;
+        font-size: 10px;
         color: #fff;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         border-radius: 10px;
@@ -350,19 +451,34 @@ figure {
         top: 15%;
         text-transform: uppercase;
     }
+    .thumbnail {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        justify-content: start;
+    }
+    .thumbnail figure {
+        scroll-snap-align: center;
+    }
+    .thumbnail figure figcaption {
+        font-size: 12px;
+    }
     .slider-items .item figcaption h2 {
-    font-size: 14px;
+    font-size: 10px;
     }
     .slider-items .item figcaption p:nth-child(1) {
         font-size: 8px;
         width: 100%;
     }
     .slider-items .item figcaption {
-        font-size: 10px;
+        font-size: 8px;
         z-index: 10;
     }
     .arrows {
         top: 70%;
+        display: flex;
+        gap: 10px;
     }
 }
 
@@ -378,13 +494,40 @@ figure {
         top: 0px;
     }
 
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+
+    .dropdown {
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        z-index: 100;
+    }
+
     .logo-glass {
         font-size: 16px;
         color: rgba(255, 255, 255, 0.3);
         text-transform: uppercase;
     }
     .h-regular {
-        font-size: 16px;
+        font-size: 14px;
         color: #fff;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         border-radius: 10px;
@@ -395,8 +538,23 @@ figure {
         top: 15%;
         text-transform: uppercase;
     }
+    .thumbnail {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        justify-content: start;
+    }
+    .thumbnail figure {
+        scroll-snap-align: center;
+    }
+
+    .thumbnail figure figcaption {
+        font-size: 12px;
+    }
+
     .slider-items .item figcaption h2 {
-    font-size: 16px;
+    font-size: 14px;
     }
     .slider-items .item figcaption p:nth-child(1) {
         font-size: 12px;
@@ -407,13 +565,14 @@ figure {
         z-index: 10;
     }
     .arrows {
-        top: 65%;
+        top: 70%;
     }
 }
 
 /* Media query para pantallas pequeñas */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 451px) and (max-width:768px) {
     .menu {
+        color: var(--color1);
         display: none;
         flex-direction: column;
         align-items: center;
@@ -431,6 +590,24 @@ figure {
 
     .hamburger-menu {
         display: block;
+    }
+
+    .logo-glass {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.3);
+        text-transform: uppercase;
+    }
+    .h-regular {
+        font-size: 18px;
+        color: #fff;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        border-radius: 10px;
+        padding: 10px 10px 0px 10px;
+        backdrop-filter: blur(1px);
+        margin-left: 20px;
+        position: absolute;
+        top: 15%;
+        text-transform: uppercase;
     }
 
     .thumbnail {
@@ -464,11 +641,12 @@ figure {
     }
 
     .slider-items .item figcaption p:nth-child(1) {
-        font-size: 10px;
+        font-size: 14px;
+        width: 40%;
     }
 
     .slider-items .item figcaption {
-        font-size: 12px;
+        font-size: 14px;
         z-index: 10; /* Agregamos esta línea para asegurarnos de que el texto esté por encima de las miniaturas */
     }
 }
