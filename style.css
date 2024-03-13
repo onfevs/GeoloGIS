@@ -321,30 +321,95 @@ figure {
 }
 
 /* Pantallas extra pequeñas (XS) */
-@media screen and (max-width: 575px) {
-    /* Estilos para pantallas XS */
+@media screen and (max-width: 250px){
+
+    .slider-items {
+        position: absolute;
+        width: 100vw;
+        height: 70%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        top: 0px;
+    }
+
+    .logo-glass {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.3);
+        text-transform: uppercase;
+    }
+    .h-regular {
+        font-size: 14px;
+        color: #fff;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        border-radius: 10px;
+        padding: 10px 10px 0px 10px;
+        backdrop-filter: blur(1px);
+        margin-left: 20px;
+        position: absolute;
+        top: 15%;
+        text-transform: uppercase;
+    }
+    .slider-items .item figcaption h2 {
+    font-size: 14px;
+    }
+    .slider-items .item figcaption p:nth-child(1) {
+        font-size: 8px;
+        width: 100%;
+    }
+    .slider-items .item figcaption {
+        font-size: 10px;
+        z-index: 10;
+    }
+    .arrows {
+        top: 70%;
+    }
 }
 
 /* Pantallas pequeñas (SM) */
-@media screen and (min-width: 576px) and (max-width: 767px) {
-    /* Estilos para pantallas SM */
-}
+@media screen and (min-width: 251px) and (max-width: 450px) {
+    .slider-items {
+        position: absolute;
+        width: 100vw;
+        height: 70%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        top: 0px;
+    }
 
-/* Pantallas medianas (MD) */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    /* Estilos para pantallas MD */
+    .logo-glass {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.3);
+        text-transform: uppercase;
+    }
+    .h-regular {
+        font-size: 16px;
+        color: #fff;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        border-radius: 10px;
+        padding: 10px 10px 0px 10px;
+        backdrop-filter: blur(1px);
+        margin-left: 20px;
+        position: absolute;
+        top: 15%;
+        text-transform: uppercase;
+    }
+    .slider-items .item figcaption h2 {
+    font-size: 16px;
+    }
+    .slider-items .item figcaption p:nth-child(1) {
+        font-size: 12px;
+        width: 100%;
+    }
+    .slider-items .item figcaption {
+        font-size: 12px;
+        z-index: 10;
+    }
+    .arrows {
+        top: 65%;
+    }
 }
-
-/* Pantallas grandes (LG) */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-    /* Estilos para pantallas LG */
-}
-
-/* Pantallas extra grandes (XL) */
-@media screen and (min-width: 1200px) {
-    /* Estilos para pantallas XL */
-}
-
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
@@ -361,6 +426,7 @@ figure {
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
+        z-index: 100; /* Agregamos esta línea para asegurarnos de que el menú esté por encima de otros elementos */
     }
 
     .hamburger-menu {
@@ -387,10 +453,14 @@ figure {
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 100; /* Agregamos esta línea para asegurarnos de que las flechas estén por encima de otros elementos */
     }
 
-    .dropdown{
-        left: 0px;
+    .dropdown {
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        z-index: 100; /* Agregamos esta línea para asegurarnos de que el dropdown esté por encima de otros elementos */
     }
 
     .slider-items .item figcaption p:nth-child(1) {
@@ -398,6 +468,7 @@ figure {
     }
 
     .slider-items .item figcaption {
-        font-size: 12px; 
+        font-size: 12px;
+        z-index: 10; /* Agregamos esta línea para asegurarnos de que el texto esté por encima de las miniaturas */
     }
 }
