@@ -355,7 +355,7 @@ figure {
 
 .thumbnail figure {
     width: 150px;
-    height: 220px;
+    height: 250px;
     filter: brightness(0.3);
     transition: filter 0.5s, transform 0.3s ease-in-out;
     flex-shrink: 0;
@@ -570,8 +570,8 @@ figure {
     }
     .thumbnail figure {
         scroll-snap-align: center;
-        width: 100px;
-        height: 150px;
+        width: 120px;
+        height: 200px;
     }
 
     .thumbnail figure figcaption {
@@ -606,6 +606,7 @@ figure {
     .menu > li > a {
         color: var(--color1); /* Cambiar al color deseado */
     }
+
 }
 
 /* Media query para pantallas pequeñas */
@@ -704,6 +705,10 @@ figure {
 
     .menu > li > a {
         color: var(--color1); /* Cambiar al color deseado */
+    }
+
+    .arrows {
+        top: 70%;
     }
     
 }
