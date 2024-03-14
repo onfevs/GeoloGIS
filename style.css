@@ -570,7 +570,7 @@ figure {
     }
     .thumbnail figure {
         scroll-snap-align: center;
-        height: 180px;
+        height: 170px;
     }
 
     .thumbnail figure figcaption {
@@ -581,13 +581,16 @@ figure {
         font-size: 12px;
     }
     .slider-items .item figcaption p:nth-child(1) {
-        font-size: 12px;
+        font-size: 10px; /* P primera */
         width: 100%;
         align-self: center;
     }
     .slider-items .item figcaption {
         left: 50%;
         transform: translateX(-50%);
+        top: 7%;
+        width: 90%;
+        max-width: 80%;
     }
 
     .slider-items .item figcaption p.description {
@@ -607,7 +610,7 @@ figure {
     }
 
     .arrows {
-        top: 69%;
+        top: 65%;
     }
 
 }
