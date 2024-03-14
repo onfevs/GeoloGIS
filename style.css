@@ -578,7 +578,7 @@ figure {
     }
 
     .slider-items .item figcaption h2 {
-        font-size: 14px;
+        font-size: 12px;
     }
     .slider-items .item figcaption p:nth-child(1) {
         font-size: 12px;
@@ -596,7 +596,7 @@ figure {
     }
 
     .service-list li {
-        font-size: 12px;
+        font-size: 10px;
         color: white;
         margin-bottom: 10px;
         font-family: var(--font_P);
@@ -607,7 +607,7 @@ figure {
     }
 
     .arrows {
-        top: 72%;
+        top: 69%;
     }
 
 }
