@@ -25,6 +25,14 @@ body {
     margin: 0;
     background-color: #010101;
     color: #eee;
+    -webkit-user-select: none; /* Para navegadores basados en WebKit */
+    -moz-user-select: none; /* Para navegadores basados en Mozilla */
+    -ms-user-select: none; /* Para navegadores basados en Internet Explorer/Edge */
+    user-select: none;
+}
+
+.no-download {
+    pointer-events: none;
 }
 
 svg {
@@ -185,6 +193,7 @@ figure {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 .slider-items .item::after {
@@ -373,6 +382,7 @@ figure {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 .thumbnail figure.active {
