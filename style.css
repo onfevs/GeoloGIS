@@ -570,7 +570,6 @@ figure {
     }
     .thumbnail figure {
         scroll-snap-align: center;
-        width: 120px;
         height: 200px;
     }
 
@@ -579,10 +578,10 @@ figure {
     }
 
     .slider-items .item figcaption h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
     .slider-items .item figcaption p:nth-child(1) {
-        font-size: 14px;
+        font-size: 12px;
         width: 100%;
         align-self: center;
     }
@@ -593,7 +592,7 @@ figure {
 
     .slider-items .item figcaption p.description {
         font-family: var(--font_P);
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .service-list li {
@@ -605,6 +604,10 @@ figure {
 
     .menu > li > a {
         color: var(--color1); /* Cambiar al color deseado */
+    }
+
+    .arrows {
+        top: 70%;
     }
 
 }
