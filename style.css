@@ -25,25 +25,6 @@ body {
     margin: 0;
     background-color: #010101;
     color: #eee;
-    /* .merriweather-light {
-        font-family: "Merriweather", serif;
-        font-weight: 300;
-        font-style: normal;
-      } */
-      /* .pt-sans-regular {
-        font-family: "PT Sans", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      } */
-    /* // <uniquifier>: Use a unique and descriptive class name
-        // <weight>: Use a value from 100 to 900
-
-        .montserrat-<uniquifier> {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-        } */
 }
 
 svg {
@@ -58,9 +39,9 @@ a {
 
 /* Estilos del encabezado */
 header {
-    width: 90%;
-    max-width: 1200px;
-    margin: 10px auto;
+    /* width: 95%; */
+    /* max-width: 1200px; */
+    margin: 30px 30px 0px 30px;
     position: relative;
     z-index: 100;
     display: flex;
@@ -316,6 +297,9 @@ figure {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .arrows button {
@@ -395,12 +379,11 @@ figure {
 }
 
 /* Pantallas extra pequeñas (XS) */
-@media screen and (max-width: 250px){
-
+@media screen and (max-width: 314px){
     .slider-items {
         position: absolute;
         width: 100vw;
-        height: 100%;
+        height: 100vh;
         max-width: 100%;
         margin: 0 auto;
         overflow: hidden;
@@ -419,7 +402,7 @@ figure {
         top: 50px;
         right: 0;
         width: 100%;
-        padding: 20px;
+        padding: 10px;
         box-sizing: border-box;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.1);
@@ -435,22 +418,27 @@ figure {
     }
 
     .logo-glass {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.3);
+        font-family: var(--font-T);
+        font-size: 10px;
+        color: var(--color1);
         text-transform: uppercase;
     }
+    
     .h-regular {
-        font-size: 10px;
-        color: #fff;
+        font-family: var(--font-ST);
+        font-size: 12px;
+        color: rgb(255, 255, 255, 0.7);
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         border-radius: 10px;
         padding: 10px 10px 0px 10px;
         backdrop-filter: blur(1px);
         margin-left: 20px;
         position: absolute;
-        top: 15%;
+        top: 1%;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
+
     .thumbnail {
         overflow-x: scroll;
         scroll-behavior: smooth;
@@ -461,33 +449,47 @@ figure {
     .thumbnail figure {
         scroll-snap-align: center;
     }
+
     .thumbnail figure figcaption {
-        font-size: 12px;
+        font-size: 10px;
     }
+
     .slider-items .item figcaption h2 {
-    font-size: 10px;
+    font-size: 12px;
     }
     .slider-items .item figcaption p:nth-child(1) {
-        font-size: 8px;
+        font-size: 10px;
         width: 100%;
+        align-self: center;
     }
     .slider-items .item figcaption {
-        font-size: 8px;
-        z-index: 10;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .arrows {
-        top: 70%;
-        display: flex;
-        gap: 10px;
+
+    .slider-items .item figcaption p.description {
+        font-family: var(--font_P);
+        font-size: 10px;
+    }
+
+    .service-list li {
+        font-size: 10px;
+        color: white;
+        margin-bottom: 10px;
+        font-family: var(--font_P);
+    }
+
+    .menu > li > a {
+        color: var(--color1); /* Cambiar al color deseado */
     }
 }
 
 /* Pantallas pequeñas (SM) */
-@media screen and (min-width: 251px) and (max-width: 450px) {
+@media screen and (min-width: 315px) and (max-width: 450px) {
     .slider-items {
         position: absolute;
         width: 100vw;
-        height: 70%;
+        height: 100vh;
         max-width: 100%;
         margin: 0 auto;
         overflow: hidden;
@@ -522,22 +524,27 @@ figure {
     }
 
     .logo-glass {
-        font-size: 16px;
-        color: rgba(255, 255, 255, 0.3);
+        font-family: var(--font-T);
+        font-size: 12px;
+        color: var(--color1);
         text-transform: uppercase;
     }
+    
     .h-regular {
-        font-size: 14px;
-        color: #fff;
+        font-family: var(--font-ST);
+        font-size: 18px;
+        color: rgb(255, 255, 255, 0.7);
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         border-radius: 10px;
         padding: 10px 10px 0px 10px;
         backdrop-filter: blur(1px);
         margin-left: 20px;
         position: absolute;
-        top: 15%;
+        top: 1%;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
+
     .thumbnail {
         overflow-x: scroll;
         scroll-behavior: smooth;
@@ -554,18 +561,32 @@ figure {
     }
 
     .slider-items .item figcaption h2 {
-    font-size: 14px;
+    font-size: 16px;
     }
     .slider-items .item figcaption p:nth-child(1) {
-        font-size: 12px;
+        font-size: 14px;
         width: 100%;
+        align-self: center;
     }
     .slider-items .item figcaption {
-        font-size: 12px;
-        z-index: 10;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .arrows {
-        top: 70%;
+
+    .slider-items .item figcaption p.description {
+        font-family: var(--font_P);
+        font-size: 14px;
+    }
+
+    .service-list li {
+        font-size: 12px;
+        color: white;
+        margin-bottom: 10px;
+        font-family: var(--font_P);
+    }
+
+    .menu > li > a {
+        color: var(--color1); /* Cambiar al color deseado */
     }
 }
 
@@ -593,21 +614,25 @@ figure {
     }
 
     .logo-glass {
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.3);
+        font-family: var(--font-T);
+        font-size: 14px;
+        color: var(--color1);
         text-transform: uppercase;
     }
+    
     .h-regular {
-        font-size: 18px;
-        color: #fff;
+        font-family: var(--font-ST);
+        font-size: 20px;
+        color: rgb(255, 255, 255, 0.7);
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         border-radius: 10px;
         padding: 10px 10px 0px 10px;
         backdrop-filter: blur(1px);
         margin-left: 20px;
         position: absolute;
-        top: 15%;
+        top: 1%;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     .thumbnail {
@@ -630,14 +655,17 @@ figure {
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 100; /* Agregamos esta línea para asegurarnos de que las flechas estén por encima de otros elementos */
+        z-index: 100;
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
     }
 
     .dropdown {
         left: 0;
         background-color: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(5px);
-        z-index: 100; /* Agregamos esta línea para asegurarnos de que el dropdown esté por encima de otros elementos */
+        z-index: 100;
     }
 
     .slider-items .item figcaption p:nth-child(1) {
@@ -647,6 +675,24 @@ figure {
 
     .slider-items .item figcaption {
         font-size: 14px;
-        z-index: 10; /* Agregamos esta línea para asegurarnos de que el texto esté por encima de las miniaturas */
+        z-index: 10;
+        height: 50%;
     }
+
+    .slider-items .item figcaption p.description {
+        font-family: var(--font_P);
+        font-size: 18px;
+    }
+
+    .service-list li {
+        font-size: 14px;
+        color: white;
+        margin-bottom: 10px;
+        font-family: var(--font_P);
+    }
+
+    .menu > li > a {
+        color: var(--color1); /* Cambiar al color deseado */
+    }
+    
 }
