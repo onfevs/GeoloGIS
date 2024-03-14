@@ -505,7 +505,7 @@ figure {
     .slider-items {
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         max-width: 100%;
         margin: 0 auto;
         overflow: hidden;
@@ -570,7 +570,7 @@ figure {
     }
     .thumbnail figure {
         scroll-snap-align: center;
-        height: 200px;
+        height: 180px;
     }
 
     .thumbnail figure figcaption {
@@ -607,7 +607,7 @@ figure {
     }
 
     .arrows {
-        top: 70%;
+        top: 72%;
     }
 
 }
